@@ -1,0 +1,90 @@
+body {
+  background: #34495e;
+}
+
+.fl {
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+  width:300px;
+  height:400px;
+  margin: 20px auto;
+  position: relative;
+  perspective:500px;
+}
+
+.front, .back {
+  position: absolute;
+  height:100%;
+  width:100%;
+  transition:all 0.5s;
+  backface-visibility:hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #2c3e50;
+}
+
+.front {
+  background:#fff;
+  color: #e74c3c;
+  font-family: 'Slabo 27px', serif;
+  font-size: 20px;
+}
+
+.front span {
+  position: absolute;
+  font-size: 30px;
+}
+
+.front span.ace-top {
+  top: 10px;
+  left: 10px;
+}
+
+.front span.ace-bottom {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+i.fa-heart {
+  position: absolute;
+}
+
+i.top-heart {
+  top: 45px;
+  left: 10px;
+}
+ 
+i.middle-heart {
+  top: 150px;
+  left: 100px;
+}
+
+i.bottom-heart {
+  bottom: 45px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.foto{
+    height: 100%;
+    width: 100%;
+}
+
+.back {
+  background: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ourglowinghearts.ca%2Fproducts%2Flight-up-live-sept-22-red-neon-heart&psig=AOvVaw1UBD6vJz-Neg7xmd6uTrtY&ust=1696394294012000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCvk6yH2YEDFQAAAAAdAAAAABAE);
+  background-color: #e74c3c;
+  background-blend-mode: luminosity;
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
